@@ -19,7 +19,9 @@
 <acme:menu-bar code="master.menu.home">
 	<acme:menu-left>
 		<acme:menu-option code="master.menu.anonymous" access="isAnonymous()">
-			<acme:menu-suboption code="master.menu.anonymous.favourite-link" action="http://www.example.com/"/>
+			<acme:menu-suboption code="master.menu.anonymous.favourite-link.frankrogo" action="https://es.wikipedia.org/wiki/Wikipedia:Portada"/>
+			<acme:menu-suboption code="master.menu.anonymous.favourite-link.serperrui1" action="https://www.realbetisbalompie.es//"/>
+			
 			<acme:menu-suboption code="master.menu.anonymous.bulletin.list" action="/anonymous/bulletin/list"/>
 	 		<acme:menu-suboption code="master.menu.anonymous.bulletin.create" action="/anonymous/bulletin/create"/>
 		</acme:menu-option>
