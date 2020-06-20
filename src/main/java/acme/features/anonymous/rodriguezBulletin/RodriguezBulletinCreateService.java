@@ -1,12 +1,12 @@
 
-package acme.features.anonymous.bulletin;
+package acme.features.anonymous.rodriguezBulletin;
 
 import java.util.Date;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import acme.entities.bulletins.Bulletin;
+import acme.entities.rodriguezBulletins.rodriguezBulletin;
 import acme.framework.components.Errors;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
@@ -14,20 +14,20 @@ import acme.framework.entities.Anonymous;
 import acme.framework.services.AbstractCreateService;
 
 @Service
-public class AnonymousBulletinCreateService implements AbstractCreateService<Anonymous, Bulletin> {
+public class RodriguezBulletinCreateService implements AbstractCreateService<Anonymous, rodriguezBulletin> {
 
 	@Autowired
-	AnonymousBulletinRepository repository;
+	RodriguezBulletinRepository repository;
 
 
 	@Override
-	public boolean authorise(final Request<Bulletin> request) {
+	public boolean authorise(final Request<rodriguezBulletin> request) {
 		assert request != null;
 		return true;
 	}
 
 	@Override
-	public void bind(final Request<Bulletin> request, final Bulletin entity, final Errors errors) {
+	public void bind(final Request<rodriguezBulletin> request, final rodriguezBulletin entity, final Errors errors) {
 		assert request != null;
 		assert entity != null;
 		assert errors != null;
@@ -35,7 +35,7 @@ public class AnonymousBulletinCreateService implements AbstractCreateService<Ano
 	}
 
 	@Override
-	public void unbind(final Request<Bulletin> request, final Bulletin entity, final Model model) {
+	public void unbind(final Request<rodriguezBulletin> request, final rodriguezBulletin entity, final Model model) {
 		assert request != null;
 		assert entity != null;
 		assert model != null;
@@ -43,13 +43,12 @@ public class AnonymousBulletinCreateService implements AbstractCreateService<Ano
 	}
 
 	@Override
-	public Bulletin instantiate(final Request<Bulletin> request) {
+	public rodriguezBulletin instantiate(final Request<rodriguezBulletin> request) {
 		assert request != null;
 
-		Bulletin res;
+		rodriguezBulletin res;
 		Date moment;
-
-		res = new Bulletin();
+		res = new rodriguezBulletin();
 		moment = new Date(System.currentTimeMillis() - 1);
 
 		res.setAuthor("Frank");
@@ -59,14 +58,14 @@ public class AnonymousBulletinCreateService implements AbstractCreateService<Ano
 	}
 
 	@Override
-	public void validate(final Request<Bulletin> request, final Bulletin entity, final Errors errors) {
+	public void validate(final Request<rodriguezBulletin> request, final rodriguezBulletin entity, final Errors errors) {
 		assert request != null;
 		assert entity != null;
 		assert errors != null;
 	}
 
 	@Override
-	public void create(final Request<Bulletin> request, final Bulletin entity) {
+	public void create(final Request<rodriguezBulletin> request, final rodriguezBulletin entity) {
 		assert request != null;
 		assert entity != null;
 		this.repository.save(entity);

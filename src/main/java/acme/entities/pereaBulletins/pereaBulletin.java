@@ -1,5 +1,5 @@
 
-package acme.entities.bulletins;
+package acme.entities.pereaBulletins;
 
 import java.util.Date;
 
@@ -16,16 +16,16 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
-public class Bulletin extends DomainEntity {
+public class pereaBulletin extends DomainEntity {
 
 	private static final long	serialVersionUID	= 1L;
 
 	@NotBlank
 	//@Pattern(regexp = "^[a-zA-Z]{1,}(Bulletin)$")
-	private String				author;
+	private String				title;
 
 	@NotBlank
-	private String				description;
+	private String				body;
 
 	@Temporal(TemporalType.TIMESTAMP)
 	@Past
