@@ -20,15 +20,6 @@
         primary key (`id`)
     ) engine=InnoDB;
 
-    create table `bulletin` (
-       `id` integer not null,
-        `version` integer not null,
-        `author` varchar(255),
-        `description` varchar(255),
-        `moment` datetime(6),
-        primary key (`id`)
-    ) engine=InnoDB;
-
     create table `consumer` (
        `id` integer not null,
         `version` integer not null,
@@ -64,6 +55,24 @@
     ) engine=InnoDB;
 
     insert into `hibernate_sequence` values ( 1 );
+
+    create table `perea_bulletin` (
+       `id` integer not null,
+        `version` integer not null,
+        `body` varchar(255),
+        `moment` datetime(6),
+        `title` varchar(255),
+        primary key (`id`)
+    ) engine=InnoDB;
+
+    create table `rodriguez_bulletin` (
+       `id` integer not null,
+        `version` integer not null,
+        `author` varchar(255),
+        `description` varchar(255),
+        `moment` datetime(6),
+        primary key (`id`)
+    ) engine=InnoDB;
 
     alter table `user_account` 
        add constraint UK_castjbvpeeus0r8lbpehiu0e4 unique (`username`);

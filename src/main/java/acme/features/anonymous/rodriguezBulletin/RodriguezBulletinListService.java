@@ -32,7 +32,7 @@ public class RodriguezBulletinListService implements AbstractListService<Anonymo
 		assert request != null;
 		assert entity != null;
 		assert model != null;
-		request.unbind(entity, model, "author", "descirption", "moment");
+		request.unbind(entity, model, "author", "description", "moment");
 	}
 
 	@Override

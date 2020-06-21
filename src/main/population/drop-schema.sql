@@ -25,8 +25,6 @@
 
     drop table if exists `authenticated`;
 
-    drop table if exists `bulletin`;
-
     drop table if exists `consumer`;
 
     drop table if exists `provider`;
@@ -34,3 +32,7 @@
     drop table if exists `user_account`;
 
     drop table if exists `hibernate_sequence`;
+
+    drop table if exists `perea_bulletin`;
+
+    drop table if exists `rodriguez_bulletin`;
