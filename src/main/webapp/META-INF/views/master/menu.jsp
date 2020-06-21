@@ -19,7 +19,14 @@
 <acme:menu-bar code="master.menu.home">
 	<acme:menu-left>
 		<acme:menu-option code="master.menu.anonymous" access="isAnonymous()">
-			<acme:menu-suboption code="master.menu.anonymous.favourite-link" action="http://www.example.com/"/>
+			<acme:menu-suboption code="master.menu.anonymous.favourite-link.frankrogo" action="https://es.wikipedia.org/wiki/Wikipedia:Portada"/>
+			<acme:menu-suboption code="master.menu.anonymous.favourite-link.serperrui1" action="https://www.realbetisbalompie.es//"/>
+			<acme:menu-separator/>
+			<acme:menu-suboption code="master.menu.anonymous.perea-bulletin.list" action="/anonymous/perea-bulletin/list"/>
+	 		<acme:menu-suboption code="master.menu.anonymous.perea-bulletin.create" action="/anonymous/perea-bulletin/create"/>
+	 		<acme:menu-separator/>
+	 		<acme:menu-suboption code="master.menu.anonymous.rodriguez-bulletin.list" action="/anonymous/rodriguez-bulletin/list"/>
+	 		<acme:menu-suboption code="master.menu.anonymous.rodriguez-bulletin.create" action="/anonymous/rodriguez-bulletin/create"/>
 		</acme:menu-option>
 
 		<acme:menu-option code="master.menu.administrator" access="hasRole('Administrator')">
